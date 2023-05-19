@@ -1,0 +1,179 @@
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+  outline: 0 transparent solid;
+}
+
+html {
+  font-size: 10px;
+}
+
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+span {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #222;
+}
+
+.card {
+  width: 100%;
+  max-width: 20vw;
+  background: linear-gradient(135deg, #00feba, #5b548a);
+  color: #fff;
+  border-radius: 20px;
+  padding: 40px 36px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  transition: 375ms ease;
+}
+
+.card>*:not(:last-child):not(:first-child) {
+  margin-top: 24px;
+}
+
+.search {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  column-gap: 16px;
+}
+
+.search input {
+  border: 0;
+  -webkit-appearance: none;
+  appearance: none;
+  background: #ebfffc;
+  color: #0d0d0d;
+  padding: 10px 25px;
+  height: 60px;
+  border-radius: 30px;
+  flex: 1;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  font-weight: 500;
+  transition: outline 135ms ease;
+  min-width: 10vw;
+}
+
+.search input:focus {
+  outline: 3px #743b81 solid;
+}
+
+.search button {
+  border: 0;
+  outline: 0;
+  background: #ebfffc;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  min-width: 60px;
+  min-height: 60px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 175ms ease, outline 135ms ease;
+}
+
+.search button:focus {
+  outline: 3px #743b81 solid;
+}
+
+.search button:hover {
+  transform: scale(1.1);
+}
+
+.weather-icon {
+  max-width: 320px;
+  min-width: 100px;
+  height: auto;
+}
+
+.weather h1 {
+  font-size: 5.6rem;
+  line-height: 7rem;
+  font-weight: 600;
+}
+
+.weather h2 {
+  font-size: 3.6rem;
+  line-height: 4.8rem;
+  font-weight: 500;
+}
+
+.weather p {
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+}
+
+.details {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  column-gap: 16px;
+  margin-top: 36px;
+  width: 100%;
+}
+
+div.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 8px;
+}
+
+div.row>div {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  row-gap: 4px;
+}
+
+.weather h3 {
+  font-size: 1.6rem;
+  line-height: 2rem;
+}
+
+.weather {
+  max-height: 0;
+  overflow: hidden;
+  transition: 800ms ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.weather.shown {
+  max-height: 100vh;
+}
+
+.error {
+  font-size: 18px;
+  margin-top: 10px;
+  display: none;
+}
